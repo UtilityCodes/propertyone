@@ -1,0 +1,338 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Grechen+Fuemen&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Oswald:wght@200..700&family=Pacifico&family=Saira+Extra+Condensed:wght@100;200;300;400;500;600;700;800;900&family=Sigmar&display=swap');
+
+
+
+
+*{
+    margin: 0;
+    font-family: "Oswald", serif;
+}
+
+button{
+    cursor: pointer;
+}
+
+body{
+    display: flex;
+    background-color: white;
+    min-height: 100vh;
+}
+.navi{
+    background-color: rgb(250, 249, 252);
+    width: 5%;
+    border-right: 2px solid rgb(241, 236, 236);  
+}
+
+.nav-header{
+    padding: 10px 0;
+    width: 100%;
+}
+
+
+.nav-header .logo{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.nav-header span{
+
+    background-color: rgb(250, 249, 252);
+    font-size: 2rem;
+    font-weight: bold;
+    font-family: "Sigmar", serif;
+}
+
+.nav-body{
+    padding: 10px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+    overflow-y: auto; /* Enable vertical scrolling */
+    height: 70vh; /* Set height to full viewport height */
+}
+
+
+/*WEBKIT SCROLLBAR*/
+/* General scrollbar styling */
+.nav-body::-webkit-scrollbar {
+    width: 1px; /* Width of the scrollbar */
+}
+
+/* Track (the background of the scrollbar) */
+.nav-body::-webkit-scrollbar-track {
+    background: rgb(241, 236, 236); /* Light gray background */
+    border-radius: 4px; /* Rounded corners */
+}
+
+/* Handle (the draggable part of the scrollbar) */
+.nav-body::-webkit-scrollbar-thumb {
+    background: rgb(200, 200, 200); /* Gray scrollbar handle */
+    border-radius: 4px; /* Rounded corners */
+    border: 2px solid rgb(241, 236, 236); /* Match the track color */
+}
+
+/* Handle on hover */
+.nav-body::-webkit-scrollbar-thumb:hover {
+    background: rgb(150, 150, 150); /* Darker gray on hover */
+}
+/* EXIT WEBKIT SCROLLBAR*/
+
+
+
+
+.nav-body .nav-icon{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 5px;
+    width: 100%;
+}
+
+.nav-body .nav-icon a{
+    text-decoration: none;
+}
+
+
+.nav-body .nav-icon .menu{
+    display: flex;
+    justify-content: center;
+    width: 3rem;
+    height: 3rem;
+    margin: 1px;
+    border-radius: 5px;
+}
+
+
+
+.nav-body .nav-icon .submenu{
+
+    background-color: rgb(236, 235, 238);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    display: none;
+    width: 100%;
+    font-family: "Anton", serif;
+}
+
+.nav-body .nav-icon .menu:hover{
+    background-color: rgb(212, 212, 212);
+}
+
+.nav-body .nav-icon a svg{
+    width: 2rem;
+}
+
+.nav-body .nav-icon .submenu a{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: .2rem;
+    width: 100%;
+    border-bottom: 1px solid #ddd;
+    border-radius: 5px;
+    height: 5rem;
+}
+
+.nav-body .nav-icon .submenu a:hover{
+    background-color: rgb(221, 221, 221);
+}
+
+
+.nav-body .nav-icon .submenu a svg{
+    width: 1.5rem;
+}
+
+.nav-body .nav-icon .submenu span{
+    text-align: center;
+    font-size: 10px;
+    color: #000;
+    line-height: 15px;
+}
+
+
+
+/*EXIT NAVI CSS*/
+
+
+
+
+/*CONTENT CSS*/
+.content-body{
+    width: 95%;
+}
+
+.content-header{
+    display: flex;
+    margin: 10px 0;
+}
+
+.content-header .homespace{
+    width: 30%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.content-header .homespace .page-title{
+    font-size: 2rem;
+
+    font-family: "Pacifico", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.content-header .homespace .company{
+    position: relative;
+    
+}
+
+.content-header .homespace .company .company-down,
+.content-header .workspace .logout .logout-down{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: .5rem 0;
+    border-radius: 3px;
+    display: none;
+}
+
+.content-header .homespace .company .company-down a,
+.content-header .workspace .logout .logout-down a{
+    border-bottom: 1px solid #ddd;
+    color: #000;
+    background-color: rgb(241, 246, 248);
+    padding: 1rem;
+    text-decoration: none;
+    border-radius: 3px;
+}
+
+.content-header .homespace .company .company-down a:hover,
+.content-header .workspace .logout .logout-down a:hover{
+    background-color: rgb(236, 236, 238);
+}
+
+.content-header .homespace .company .company-down a:last-child,
+.content-header .workspace .logout .logout-down a:last-child{
+    border-bottom: none;
+}
+
+.content-header .homespace .company .company-down a i,
+.content-header .workspace .logout .logout-down a i{
+    width: 1rem;
+    margin-right: 1rem;
+}
+
+.content-header .homespace .company button{
+    display: flex;
+    background: transparent;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    justify-content: space-between;
+    padding: .25rem 1rem;
+    gap: 1rem;
+    align-items: center;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+.content-header .homespace .company button .icon{
+    font-size: 2rem;
+}
+
+.content-header .homespace .company button .icon i{
+    color: rgb(12, 177, 12);
+}
+
+
+.content-header .homespace .company button .arrow{
+    font-size: 1rem;
+}
+
+.content-header .homespace .company button .details{
+    display: flex;
+    flex-direction: column;
+}
+
+.content-header .homespace .company button .details .name{
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.content-header .homespace .company button .details .location{
+    color: #8f8f91;
+}
+
+.content-header .workspace{
+    width: 70%;
+    display: flex;
+    justify-content: flex-end;
+    gap: 1rem;
+    align-items: center;
+    padding: 0 1rem;
+}
+
+.content-header .workspace .schedule .greetings span:first-child{
+    color: #939596;
+    font-weight: bold;
+}
+
+.content-header .workspace .schedule .greetings span:last-child{
+    font-weight: bold;
+}
+
+.content-header .workspace .schedule{
+    display: flex;
+    justify-content: space-around;
+    gap: 1rem;
+    margin: 0 1rem;
+}
+
+.content-header .workspace .schedule .time{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.content-header .workspace .schedule .time span:last-child{
+    color: #939596;
+}
+
+.content-header .workspace .operation{
+    display: flex;
+    gap: 1rem;
+}
+
+.content-header .workspace .operation .logout{
+    position: relative;
+}
+
+.content-header .workspace .operation button{
+    height: 1.5rem;
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+    gap: .5rem;
+}
+
+.content-header .workspace .operation button:hover{
+    box-shadow: none;
+}
+
+.content-header .workspace .operation button span{
+    font-family: "Saira Extra Condensed", serif;
+    font-size: 1.2rem;
+}
+
+.content-header .workspace .logout .logout-down{
+    width: 350%;
+    right: 0;
+}
