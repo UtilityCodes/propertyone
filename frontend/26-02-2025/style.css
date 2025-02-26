@@ -1,0 +1,1146 @@
+
+
+
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Grechen+Fuemen&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Oswald:wght@200..700&family=Pacifico&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Playwrite+IT+Moderna:wght@100..400&family=Saira+Extra+Condensed:wght@100;200;300;400;500;600;700;800;900&family=Sigmar&display=swap');
+
+/*reference*/
+:root{
+    --transition: all .5s ease-in-out;
+    --transition-1: all .3s ease-in-out;
+    --transition-2: all .2s ease-in-out;
+    --transition-3: all .1s ease-in-out;
+    --btn-green: rgb(49, 175, 49);
+    --btn-hover-green: rgb(90, 207, 90);
+    --btn-blue: rgb(62, 62, 161);
+    --btn-hover-blue: rgb(152, 152, 212);
+    --btn-gap: .5rem;
+}
+
+button{
+    cursor: pointer;
+}
+
+.flex{
+    display: flex;
+    align-items: center;
+}
+
+/*exit reference*/
+
+
+*{
+    margin: 0;
+    font-family: "Oswald", serif;
+}
+
+
+
+
+
+body{
+    display: flex;
+    background-color: white;
+    height: 100vh;
+    overflow: hidden;
+}
+.navi{
+    background-color: rgb(250, 249, 252);
+    width: 5%;
+    border-right: 2px solid rgb(241, 236, 236);  
+}
+
+.nav-header{
+    padding: 10px 0;
+    width: 100%;
+}
+
+
+.nav-header .logo{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.nav-header span{
+
+    background-color: rgb(250, 249, 252);
+    font-size: 2rem;
+    font-weight: bold;
+    font-family: "Sigmar", serif;
+}
+
+.nav-body{
+    padding: 10px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+    overflow-y: auto; /* Enable vertical scrolling */
+    height: 70vh; /* Set height to full viewport height */
+}
+
+
+/*WEBKIT SCROLLBAR*/
+/* General scrollbar styling */
+.nav-body::-webkit-scrollbar {
+    width: 1px; /* Width of the scrollbar */
+}
+
+/* Track (the background of the scrollbar) */
+.nav-body::-webkit-scrollbar-track {
+    background: rgb(241, 236, 236); /* Light gray background */
+    border-radius: 4px; /* Rounded corners */
+}
+
+/* Handle (the draggable part of the scrollbar) */
+.nav-body::-webkit-scrollbar-thumb {
+    background: rgb(200, 200, 200); /* Gray scrollbar handle */
+    border-radius: 4px; /* Rounded corners */
+    border: 2px solid rgb(241, 236, 236); /* Match the track color */
+}
+
+/* Handle on hover */
+.nav-body::-webkit-scrollbar-thumb:hover {
+    background: rgb(150, 150, 150); /* Darker gray on hover */
+}
+/* EXIT WEBKIT SCROLLBAR*/
+
+
+
+
+.nav-body .nav-icon{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 5px;
+    width: 100%;
+}
+
+.nav-body .nav-icon a{
+    text-decoration: none;
+}
+
+
+.nav-body .nav-icon .menu{
+    display: flex;
+    justify-content: center;
+    width: 3rem;
+    height: 3rem;
+    margin: 1px;
+    border-radius: 5px;
+}
+
+
+
+.nav-body .nav-icon .submenu{
+
+    background-color: rgb(236, 235, 238);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    display: none;
+    width: 100%;
+    font-family: "Anton", serif;
+}
+
+.nav-body .nav-icon .menu:hover{
+    background-color: rgb(212, 212, 212);
+}
+
+.nav-body .nav-icon a svg{
+    width: 2rem;
+}
+
+.nav-body .nav-icon .submenu a{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: .2rem;
+    width: 100%;
+    border-bottom: 1px solid #ddd;
+    border-radius: 5px;
+    height: 5rem;
+}
+
+.nav-body .nav-icon .submenu a:hover{
+    background-color: rgb(221, 221, 221);
+}
+
+
+.nav-body .nav-icon .submenu a svg{
+    width: 1.5rem;
+}
+
+.nav-body .nav-icon .submenu span{
+    text-align: center;
+    font-size: 10px;
+    color: #000;
+    line-height: 15px;
+}
+
+
+
+/*EXIT NAVI CSS*/
+
+
+
+
+/*CONTENT CSS*/
+.content-body{
+    width: 95%;
+    padding: 0 1rem;
+}
+
+
+/*content header*/
+.content-header{
+    display: flex;
+    margin: 10px 0;
+    /* background-color: red; */
+}
+
+.content-header .homespace{
+    width: 30%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.content-header .homespace .page-title{
+    font-size: 2rem;
+    font-family: "Pacifico", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.content-header .homespace .company{
+    position: relative;
+    
+}
+
+.content-header .homespace .company .company-down,
+.content-header .workspace .logout .logout-down{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: .5rem 0;
+    border-radius: 5px;
+    /* padding: 0 1rem; */
+    box-sizing: border-box;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    display: none;
+    z-index: 1;
+}
+
+.content-header .homespace .company .company-down a,
+.content-header .workspace .logout .logout-down a{
+    border-bottom: 1px solid #ddd;
+    color: #000;
+    background-color: rgb(248, 251, 252);
+    padding: 1rem;
+    text-decoration: none;
+    border-radius: 3px;
+}
+
+.content-header .homespace .company .company-down a:hover,
+.content-header .workspace .logout .logout-down a:hover{
+    background-color: rgb(236, 236, 238);
+}
+
+.content-header .homespace .company .company-down a:last-child,
+.content-header .workspace .logout .logout-down a:last-child{
+    border-bottom: none;
+}
+
+.content-header .homespace .company .company-down a i,
+.content-header .workspace .logout .logout-down a i{
+    width: 1rem;
+    margin-right: 1rem;
+}
+
+.content-header .homespace .company button{
+    display: flex;
+    background: transparent;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    justify-content: space-between;
+    padding: .25rem 1rem;
+    gap: 1rem;
+    align-items: center;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+.content-header .homespace .company button .icon{
+    font-size: 1rem;
+}
+
+.content-header .homespace .company button .icon i{
+    color: rgb(12, 177, 12);
+}
+
+
+.content-header .homespace .company button .arrow{
+    font-size: .5rem;
+}
+
+.content-header .homespace .company button .details{
+    display: flex;
+    flex-direction: column;
+}
+
+.content-header .homespace .company button .details .name{
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.content-header .homespace .company button .details .location{
+    color: #8f8f91;
+    font-size: 10px;
+}
+
+
+/*workspace*/
+.content-header .workspace{
+    width: 70%;
+    display: flex;
+    justify-content: flex-end;
+    gap: 1rem;
+    align-items: center;
+    padding: 0 1rem;
+}
+
+.content-header .workspace .schedule .greetings span:first-child{
+    color: #939596;
+    font-weight: bold;
+}
+
+.content-header .workspace .schedule .greetings span:last-child{
+    font-weight: bold;
+}
+
+.content-header .workspace .schedule{
+    display: flex;
+    justify-content: space-around;
+    gap: 1rem;
+    margin: 0 1rem;
+    align-items: center;
+}
+
+.content-header .workspace .schedule .time{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.content-header .workspace .schedule .time span:last-child{
+    color: #939596;
+}
+
+.content-header .workspace .operation{
+    display: flex;
+    gap: 1rem;
+}
+
+.content-header .workspace .operation .logout{
+    position: relative;
+}
+
+.content-header .workspace .operation button{
+    height: 1.5rem;
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+    gap: .5rem;
+}
+
+.content-header .workspace .operation button:hover{
+    box-shadow: none;
+}
+
+.content-header .workspace .operation button span{
+    font-family: "Saira Extra Condensed", serif;
+    font-size: 1.2rem;
+}
+
+.content-header .workspace .logout .logout-down{
+    width: 350%;
+    right: 0;
+}
+
+/*exit content header*/
+
+
+/*main content*/
+.main-content{
+    width: 100%;
+}
+
+/*inline page header*/
+
+.main-content .inline-page-header a{
+    margin: 1rem;
+    text-decoration: none;
+    color: #657179;
+    cursor: pointer;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.main-content .inline-page-header a.active{
+    font-size: 17px;
+    color: #000;
+    border-bottom: 2px solid rgb(78, 78, 78);
+}
+
+
+/*inline page body*/
+
+.inline-page-body {
+    position: relative;
+    overflow-y: auto;
+    height: 80vh;
+    margin: 10px 0;
+}
+
+/*webkit*/
+.inline-page-body::-webkit-scrollbar {
+    width: 10px;
+}
+
+
+.inline-page-body::-webkit-scrollbar-track {
+    background: rgb(241, 236, 236);
+    border-radius: 4px;
+}
+
+
+.inline-page-body::-webkit-scrollbar-thumb {
+    background: rgb(200, 200, 200);
+    border-radius: 4px;
+    border: 2px solid rgb(241, 236, 236);
+}
+
+
+.inline-page-body::-webkit-scrollbar-thumb:hover {
+    background: rgb(150, 150, 150);
+}
+/* exit webkit*/
+
+
+
+.main-content .inline-page-body .page {
+    position: absolute;
+    width: 100%;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.4s ease;
+    pointer-events: none;
+}
+
+.main-content .inline-page-body .page.active {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+}
+
+/*options tab*/
+.options-tab{
+    position: relative;
+    box-sizing: border-box;
+    padding: 0 1rem;
+}
+
+.options-tab .ot-flex{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.options-tab .ot-flex .more-options{
+    display: flex;
+    align-items: center;
+}
+
+.options-tab .ot-flex .more-options svg{
+    width: 2rem;
+    cursor: pointer;
+}
+
+.options-tab .ot-flex .operative-options{
+    display: flex;
+    gap: 1rem;
+}
+
+.options-tab .ot-flex .operative-options button{
+    display: flex;
+    border-radius: 5px;
+    border: 1px solid #bfc0c2;
+    padding: .25rem 1rem;
+    transition: all 1s ease-out;
+}
+
+/* .options-tab .operative-options button:hover{
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+    border: none;
+} */
+
+.options-tab .ot-flex .operative-options button:nth-child(1){
+    background-color: rgb(99, 99, 224);
+    color: #fff;
+    gap: .5rem;
+    
+}
+
+.options-tab .ot-flex .operative-options button:nth-child(2),
+.options-tab .ot-flex .operative-options button:nth-child(3){
+    gap: .5rem;
+}
+
+.options-tab .extra-tab{
+    z-index: 1;
+}
+
+.options-tab .extra-tab .extra-options,
+.options-tab .extra-tab .register,
+.options-tab .extra-tab .import,
+.options-tab .extra-tab .export{
+    position: absolute;
+    background-color: rgb(249, 253, 253);
+    left: 0;
+    top: calc(100% + 10px);
+    min-height: 5rem;
+    border-radius: 0 0 10px 10px;
+    padding: 1rem;
+    width: 100%;
+    box-sizing: border-box;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+    display: none;
+}
+
+/* .options-tab .extra-tab .export{
+    display: block;
+} */
+
+
+
+.options-tab .extra-tab .export .exp-btns{
+    display: flex;
+    justify-content: space-between;
+    margin: 1rem 0;
+}
+
+.options-tab .extra-tab .export .exp-btns .icon svg{
+    width: 2rem;
+    height: 2rem;
+}
+
+.options-tab .extra-tab .export .exp-btns button{
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+    font-size: 18px;
+}
+
+.options-tab .extra-tab .export .exp-btns button:hover{
+    box-shadow: none;
+    color: #000;
+}
+
+.options-tab .extra-tab .export .exp-btns button.csv{
+    background-color: rgb(2, 255, 2);
+}
+
+.options-tab .extra-tab .export .exp-btns button.csv:hover{
+    background-color: rgb(97, 247, 97);
+}
+
+.options-tab .extra-tab .export .exp-btns button.excel{
+    background-color: rgb(4, 158, 4);
+}
+
+.options-tab .extra-tab .export .exp-btns button.excel:hover{
+    background-color: rgb(78, 150, 78);
+}
+
+.options-tab .extra-tab .export .exp-btns button.pdf{
+    background-color: rgb(128, 61, 61);
+}
+
+.options-tab .extra-tab .export .exp-btns button.pdf:hover{
+    background-color: rgb(243, 115, 115);
+}
+
+.options-tab .extra-tab .register .reg-heading,
+.options-tab .extra-tab .import .imp-heading,
+.options-tab .extra-tab .export .exp-heading{
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+    color: #99999b;
+}
+
+.options-tab .extra-tab .register .reg-heading p,
+.options-tab .extra-tab .import .imp-heading p,
+.options-tab .extra-tab .export .exp-heading p{
+    color: #000;
+}
+
+.options-tab .extra-tab .register form .form-submit{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 1rem 1rem 0;
+}
+
+.options-tab .extra-tab .register form .form-section .sec{
+    display: flex;
+    gap: 1rem 3rem;
+    flex-wrap: wrap;
+}
+
+
+
+
+.options-tab .extra-tab .register form .form-section .sec label{
+    color: #939596;
+}
+
+.options-tab .extra-tab .register form .form-section .sec input,
+.options-tab .extra-tab .register form .form-section .sec textarea{
+    border-radius: 3px;
+    border: 1px solid #ddd;
+    width: 10rem;
+    height: 2.5rem;
+    padding: 0 1rem;
+    color: #5a5b5c;
+    font-family: "Josefin Sans", serif;
+    font-family: "Playfair Display", serif;
+    font-weight: bold;
+    font-size: 1.2rem;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+
+}
+
+.options-tab .extra-tab .register form .form-section .sec:last-child input{
+    height: 5rem;
+    width: 40rem;
+    font-size: 1rem;
+}
+
+.options-tab .extra-tab .register form .form-section .sec textarea{
+    height: 5rem;
+    width: 40rem;
+    font-size: .8rem;
+}
+
+.options-tab .extra-tab .register form .form-section .sec input[type="number"]{
+    text-align: right;
+}
+
+
+
+.options-tab .extra-tab .register form .form-section .sec label span{
+    color: red;
+}
+
+.options-tab .extra-tab .register form .form-submit button{
+    display: flex;
+    gap: .5rem;
+    align-items: center;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+    padding: 1rem;
+}
+
+.options-tab .extra-tab .register form .form-submit button:hover{
+    box-shadow: none;
+}
+
+.options-tab .extra-tab .register form .form-submit button.cancel{
+    background-color: rgb(211, 193, 193);
+}
+
+.options-tab .extra-tab .register form .form-submit button.confirm{
+    background-color: rgb(95, 177, 95);
+}
+
+.options-tab .extra-tab .register form .form-submit button i{
+    font-size: 1.2rem;
+}
+
+.options-tab .extra-tab .extra-options .eo-flex{
+    display: flex;
+    gap: 2rem;
+}
+
+.options-tab .extra-tab .extra-options svg{
+    width: 1.2rem;
+}
+
+.options-tab .extra-tab .extra-options a{
+    text-decoration: none;
+}
+
+.options-tab .extra-tab .extra-options button{
+    display: flex;
+    gap: .5rem;
+    border: none;
+    background-color: rgb(183, 187, 143);
+    padding: .5rem 1rem;
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 5px 0px, rgba(0, 0, 0, 0.1) 0px 0px 1px 0px;
+}
+
+/*the import area*/
+
+
+.options-tab .extra-tab .import .imp-area{
+    margin: 1rem 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 2px dashed #939596;
+    border-radius: 1rem;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.options-tab .extra-tab .import .imp-area:hover{
+    background-color: rgb(180, 245, 180);
+}
+
+
+.options-tab .extra-tab .import .imp-area svg{
+    width: 5rem;
+}
+
+.options-tab .extra-tab .import .imp-area .file{
+    opacity: 0;
+    cursor: pointer;
+}
+
+
+
+.options-tab .extra-tab .import .imp-area .message p{
+    font-family: "Playwrite IT Moderna", serif;
+}
+
+.options-tab .extra-tab .import .imp-area .or{
+    margin: .2rem 0 0;
+}
+
+.options-tab .extra-tab .import .imp-area button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(50, 50, 233);
+    color: #fff;
+    gap: .5rem;
+    margin: .2rem 0;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+    border: none;
+    border-radius: 3px;
+    height: 2.5rem;
+    width: 8rem;
+    transition: var(--transition-3) ;
+}
+
+.options-tab .extra-tab .import .imp-area button:hover{
+    box-shadow: none;
+    background: transparent;
+    border: 1px solid rgb(50, 50, 233);
+    color: #000;
+}
+
+.options-tab .extra-tab .import .imp-area button svg{
+    width: 1.2rem;
+    stroke: #fff;
+    display: flex;
+    align-items: center;
+}
+
+.options-tab .extra-tab .import .imp-area button span{
+    font-size: 1rem;
+}
+
+
+
+.options-tab .extra-tab .import .added-files i{
+    cursor: pointer;
+}
+
+.options-tab .extra-tab .import .added-files .loading,
+.options-tab .extra-tab .import .added-files .the-files{
+    display: flex;
+    align-items: center;
+    margin: 1rem .5rem;
+    /* background-color: aliceblue; */
+
+}
+
+.options-tab .extra-tab .import .added-files .loading .title{
+    font-size: 14px;
+    color: #4d4d4d;
+}
+
+.options-tab .extra-tab .import .added-files .loading .cancel i{
+    color: red;
+    font-size: 12.5px;
+    font-weight: 100;
+}
+
+.options-tab .extra-tab .import .added-files .the-files .title{
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.options-tab .extra-tab .import .added-files .the-files .cancel i{
+    transition: var(--transition-1);
+}
+
+.options-tab .extra-tab .import .added-files .the-files .cancel i:hover{
+    color: red;
+}
+
+.options-tab .extra-tab .import .added-files .file-icon{
+    width: 5%;
+    /* background-color: red; */
+    display: flex;
+    justify-content: center;
+}
+
+
+.options-tab .extra-tab .import .added-files .file-sections{
+    width: 95%;
+}
+
+.options-tab .extra-tab .import .added-files .file-sections .load-bar{
+    background-color: rgb(137, 223, 137);
+    height: .5rem;
+    border-radius: 10px;
+}
+
+.options-tab .extra-tab .import .added-files .file-sections .load-details{
+    font-size: .75rem;
+    color: #8f8f91;
+}
+
+.options-tab .extra-tab .import .added-files .file-icon svg{
+    width: 2rem;
+}
+
+.options-tab .extra-tab .import .added-files .title-cancel{
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.options-tab .extra-tab .import .imp-btn{
+    display: flex;
+    justify-content: space-between;
+}
+
+.options-tab .extra-tab .import .imp-btn button{
+    display: flex;
+    align-items: center;
+    border: none;
+    color: #fff;
+    gap: var(--btn-gap);
+    width: 10rem;
+    justify-content: center;
+    border-radius: 5px;
+    font-size: 1rem;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.options-tab .extra-tab .import .imp-btn button:first-child{
+    background-color: var(--btn-green);
+}
+
+.options-tab .extra-tab .import .imp-btn button:first-child:hover{
+    background-color: var(--btn-hover-green);
+    box-shadow: none;
+    color: #000;
+}
+
+.options-tab .extra-tab .import .imp-btn button:last-child{
+    background-color: var(--btn-blue);
+}
+
+.options-tab .extra-tab .import .imp-btn button:last-child:hover{
+    background-color: var(--btn-hover-blue);
+    box-shadow: none;
+    color: #000;
+}
+
+.options-tab .extra-tab .import .imp-btn button .icon{
+    display: flex;
+    align-items: center;
+}
+
+.options-tab .extra-tab .import .imp-btn button svg{
+    width: 2rem;
+}
+/*exit options tab*/
+
+
+/* page content body */
+.page-content-body{
+    height: 100%;
+    min-height: 10rem;
+    margin: 1rem ;
+}
+
+.page-content-body .pcb-heading{
+    box-sizing: border-box;
+    padding: 0 1rem;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+
+}
+
+.page-content-body .pcb-heading .flex{
+    justify-content: space-between;
+    height: 3rem;
+}
+
+.page-content-body .pcb-heading .flex .title{
+    font-family: "Libre Baskerville", serif;
+    font-weight: bold;
+}
+
+.page-content-body .pcb-heading .flex .search-box input{
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    width: 10rem;
+    padding: .2rem .5rem;
+    color: #5a5b5c;
+}
+
+.page-content-body .pcb-content{
+    /* background-color: lightblue; */
+    box-sizing: border-box;
+    padding: .5rem 1rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    margin: 1rem 0;
+}
+
+.page-content-body .pcb-content .flex{
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.page-content-body .pcb-content .flex .ref-date{
+    color: #657179;
+    font-size: .8rem;
+}
+
+.page-content-body .pcb-content .flex .item-name{
+    font-size: 1.5rem;
+    font-weight: bold;
+    font-family: "Libre Baskerville", serif;
+}
+
+.page-content-body .pcb-content .flex .item-code{
+    color: #5a5b5c;
+}
+
+.page-content-body .pcb-content .flex .price{
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.page-content-body .pcb-content .flex .price .number{
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+.page-content-body .pcb-content .flex .price span{
+    color: #5a5b5c;
+    font-size: .8rem;
+    color: #fff;
+    background-color: #000;
+    padding: .25rem .5rem;
+    border-radius: 5px;
+}
+
+
+
+.page-content-body .pcb-content .flex .room-no{
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+}
+
+.page-content-body .pcb-content .flex .room-no span:first-child{
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.page-content-body .pcb-content .flex .room-no span:last-child{
+    color: #5a5b5c;
+}
+
+.page-content-body .pcb-content .flex .occupancy .graph{
+    border: 1px solid rgb(38, 221, 38);
+    height: 1.2rem;
+    width: 10rem;
+    border-radius: 10px;
+}
+
+.page-content-body .pcb-content .flex .occupancy .graph .flex{
+    background-color: rgb(38, 221, 38);
+    height: 100%;
+    width: 30%;
+    border-radius: 10px;
+}
+
+.page-content-body .pcb-content .flex .occupancy span{
+    font-size: .8rem;
+    color: #657179;
+}
+
+
+.page-content-body .pcb-content .flex .availability{
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+}
+
+
+.page-content-body .pcb-content .flex .availability .graph {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 3rem;
+    height: 3rem;
+    font-size: 0.8rem;
+    font-weight: bold;
+    border-radius: 50%;
+    border: 5px solid transparent;
+    background-image: linear-gradient(white, white), 
+                      conic-gradient(
+                        rgb(114, 114, 250) 0%,
+                        rgb(114, 114, 250) 25%,
+                        transparent 25%, 
+                        transparent 100%
+                      );
+    background-origin: border-box;
+    background-clip: content-box, border-box;
+}
+
+.page-content-body .pcb-content .flex .availability span{
+    font-size: .8rem;
+    color: #657179;
+}
+
+.page-content-body .pcb-content .flex .desc {
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+    border-radius: 5px;
+    width: 10rem;
+    height: 5rem;
+    padding: .5rem;
+    overflow-y: auto;
+    font-size: clamp(.5rem, calc(1rem - 0.1vw * var(--text-length, 0)), 1rem);
+    line-height: 1.4;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
+
+/*WEBKIT SCROLLBAR*/
+.page-content-body .pcb-content .flex .desc::-webkit-scrollbar {
+    width: 7.5px;
+}
+
+.page-content-body .pcb-content .flex .desc::-webkit-scrollbar-track {
+    background: rgb(241, 236, 236);
+    border-radius: 4px;
+}
+
+.page-content-body .pcb-content .flex .desc::-webkit-scrollbar-thumb {
+    background: rgb(200, 200, 200);
+    border-radius: 4px;
+    border: 2px solid rgb(241, 236, 236); 
+}
+
+
+.page-content-body .pcb-content .flex .desc::-webkit-scrollbar-thumb:hover {
+    background: rgb(150, 150, 150);
+}
+/* EXIT WEBKIT SCROLLBAR*/
+  
+
+.page-content-body .pcb-content .flex .action-btns{
+    display: flex;
+    align-items: center;
+    height: 5rem;
+    width: 8rem;
+    justify-content: space-around;
+}
+
+.page-content-body .pcb-content .flex .action-btns i{
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+.page-content-body .pcb-content .flex .action-btns .edit i{
+    color: rgb(120, 120, 253);
+}
+
+.page-content-body .pcb-content .flex .action-btns .edit i:hover{
+    color: blue;
+}
+
+.page-content-body .pcb-content .flex .action-btns .delete i{
+    color: rgb(252, 117, 117);
+}
+
+.page-content-body .pcb-content .flex .action-btns .delete i:hover{
+    color: red;
+}
+
+
+/* sub-section */
+
+.page-content-body .pcb-content .sub-section{
+    
+}
+
+.page-content-body .pcb-content .sub-section .ss-body{
+
+
+}
+
+.page-content-body .pcb-content .sub-section .edit,
+.page-content-body .pcb-content .sub-section .delete{
+    display: block;
+    background-color: #edeef0;
+    box-sizing: border-box;
+    padding: 1rem;
+    border-radius: 5px;
+    margin: 1rem 0;
+}
+
+.page-content-body .pcb-content .sub-section .edit,
+.page-content-body .pcb-content .sub-section .delete{
+    display: none;
+}
